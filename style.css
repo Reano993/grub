@@ -1,0 +1,235 @@
+/* === RESET DASAR === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #222;
+}
+
+/* === NAVBAR === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a1a;
+  color: white;
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar h1 {
+  font-size: 1.6em;
+}
+
+.navbar nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: #ffd700;
+}
+
+/* === HERO SECTION === */
+.hero {
+  background: linear-gradient(rgba(33, 150, 243, 0.7), rgba(33, 203, 243, 0.7)),
+              url('https://source.unsplash.com/1600x900/?store,shopping') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1em;
+}
+
+.hero .btn {
+  background: white;
+  color: #2196f3;
+  padding: 10px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 10px 0;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #165391;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* === ANIMASI KETIKAN === */
+.typing-container {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #fffcfc;
+  width: fit-content;
+  margin: auto;
+}
+
+.typing-text::after {
+  content: '|';
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* === PRODUK SECTION === */
+.produk-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+  color: #0d47a1;
+}
+
+.produk-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.produk-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.produk-card {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 25px;
+  width: 250px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.produk-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.produk-card img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  margin-top: auto;
+}
+
+
+.produk-card h3 {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.produk-card p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.produk-card button {
+  background: #2196f3;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.produk-card button:hover {
+  background: #1769aa;
+  transform: scale(1.05);
+}
+
+/* === TENTANG & KONTAK === */
+.tentang {
+  padding: 60px 20px;
+  text-align: center;
+  background: #e3f2fd;
+}
+
+.kontak {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #2196f3;
+  color: white;
+}
+
+.kontak a {
+  font-size: 1.8em;
+  margin: 10px;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.kontak a:hover {
+  color: #ffd700;
+}
+
+/* === FOOTER === */
+footer {
+  background: #1a1a1a;
+  color: #ccc;
+  text-align: center;
+  padding: 18px;
+  font-size: 14px;
+}
+
+/* === MEDIA QUERY === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar nav a {
+    margin: 10px 0;
+  }
+
+  .produk-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .produk-card {
+    width: 90%;
+  }
+
+  .hero h2 {
+    font-size: 1.5em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+}
